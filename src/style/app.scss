@@ -1,0 +1,66 @@
+@import "./tailwind/index.css";
+
+html, body, #app,n-config-provider {
+  height: 100%;
+}
+.c-p {
+    cursor: pointer;
+}
+button, [type='button'], [type='reset'], [type='submit']{
+  background-color: var(--n-color)
+}
+
+// 滚动条样式
+$scrollbar-size: 10px;
+$scrollbar-radius: 5px;
+.scrollbar-hover {
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-button,
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-thumb {
+    visibility: hidden;
+  }
+  &:hover {
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-button,
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-thumb {
+      visibility: visible;
+    }
+  }
+}
+// Google scrollbar
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1),inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+  background-clip: padding-box;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: $scrollbar-radius;
+  min-height: 28px;
+}
+
+::-webkit-scrollbar-track:hover {
+  box-shadow: inset 11px 0 0 rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+::-webkit-scrollbar-track:active {
+  box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.14),inset -1px -1px 0 rgba(0, 0, 0, 0.07);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+.n-card.my-card {
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: 0 2px 3px 0 rgb(0 0 0 / 0.2);
+}
